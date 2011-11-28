@@ -18,7 +18,8 @@ do.
 ==License==
 
 BleuFear is licensed under the GNU GPL version 3.
-
+<http://www.gnu.org/copyleft/gpl.html> (Seriously, you haven't memorized 
+this URL yet?)
 ==TODO==
 *Fix tooltips.
 *Fix text color in some list views.
