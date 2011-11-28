@@ -1,0 +1,97 @@
+/* 
+	AUTHOR: lassekongo83
+	WEBSITE: http://lassekongo83.deviantart.com
+	LICENSE: GPL
+	DESCRIPTION: A minimalistic and usable theme made for gtk3 apps.
+*/
+
+/* default color scheme */
+@define-color bg_color #272727; /*#dcdcdc;*/
+@define-color fg_color #eeeeee; /*#2c2c2c;*/
+@define-color base_color #363636;
+@define-color text_color #eeeeee; /*#2c2c2c;*/
+@define-color selected_bg_color #0390c4; /* #accd8a; */
+@define-color selected_fg_color #eeeeee;
+@define-color tooltip_bg_color #373737;
+@define-color tooltip_fg_color #eeeeee;
+
+/* other color schemes could simply override these */
+@define-color theme_bg_color @bg_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_base_color @base_color;
+@define-color theme_text_color @text_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color theme_tooltip_bg_color @tooltip_bg_color;
+@define-color theme_tooltip_fg_color @tooltip_fg_color;
+
+/* misc colors used by gtk+ */
+@define-color info_fg_color rgb (181, 171, 156);
+@define-color info_bg_color rgb (252, 252, 189);
+@define-color warning_fg_color rgb (173, 120, 41);
+@define-color warning_bg_color rgb (250, 173, 61);
+@define-color question_fg_color rgb (97, 122, 214);
+@define-color question_bg_color rgb (138, 173, 212);
+@define-color error_fg_color rgb (166, 38, 38);
+@define-color error_bg_color rgb (237, 54, 54);
+@define-color link_color #08c;
+@define-color error_color #cc0000;
+
+/* theme common colors */
+@define-color button_bg_color shade (#303030, 1.06);
+@define-color button_insensitive_bg_color mix (@button_bg_color, @bg_color, 0.6);
+@define-color dark_bg_color #272727; /*#3f3f3f;*/
+@define-color dark_fg_color #eeeeee; /*#e0e0e0; */
+@define-color transparent rgba (0, 0, 0, 0);
+
+/* Zukitwo colors */
+@define-color toolbar_gradient_base #363636; /* #dcdcdc; */
+@define-color toolbar_gradient_final #272727; /* #d1d1d1; */
+@define-color toolbar_border #313131;
+
+@define-color button_gradient_color_a #363636; /* #fbfbfb;*/
+@define-color button_gradient_color_b #272727; /* #dedede; */
+@define-color button_hover_gradient_color_a shade (@button_gradient_color_a, 1.10);
+@define-color button_hover_gradient_color_b shade (@button_gradient_color_b, 1.10);
+@define-color button_active_gradient_color_a shade (@button_gradient_color_b, 0.80);
+@define-color button_active_gradient_color_b shade (@button_gradient_color_a, 0.80);
+
+@define-color progressbar_through_a #272727;
+@define-color progressbar_through_b #363636;
+@define-color progressbar_through_border #333333;
+@define-color progressbar_background_a #0390c5; /* #accd8a; */
+@define-color progressbar_background_b #0390C4; /* #c3dea8; */
+@define-color progressbar_border #6487AA; /* #87a964; */
+
+@define-color menuitem_background_a #0390c5;
+@define-color menuitem_background_b #0390C4;
+
+@define-color theme_border_color_a #232323;
+@define-color theme_border_color_b #191919;
+@define-color scrollslider_gradient_a #282828;
+@define-color scrollslider_gradient_b #242424;
+@define-color scrollslider_border #222222;
+@define-color listview_header_gradient_a #333333;
+@define-color listview_header_gradient_b #272727;
+@define-color listview_border #373737;
+@define-color sidebar_color #363636;
+
+@define-color trough_bg_color_a #333333;
+@define-color trough_bg_color_b #373737;
+
+@define-color treeview_even #333333;
+@define-color treeview_odd #272727;
+
+@define-color os_chrome_bg_color black;
+@define-color os_chrome_fg_color #fff;
+@define-color os_chrome_selected_bg_color #333;
+@define-color os_chrome_selected_fg_color white;
+
+@define-color chrome_bg_color #1e1a17;
+@define-color chrome_fg_color #fff;
+
+@import url("gtk-widgets.css");
+@import url("apps/gnome-panel.css");
+@import url("apps/gnome-applications.css");
+@import url("apps/nautilus.css");
+@import url("apps/unity.css");
