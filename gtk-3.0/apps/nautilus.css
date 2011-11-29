@@ -1,6 +1,6 @@
 /* desktop mode */
 .nautilus-desktop.nautilus-canvas-item {
-	color: @bg_color;
+	color: @fg_color;
 	text-shadow: 1 1 alpha (#000000, 0.8);
 }
 

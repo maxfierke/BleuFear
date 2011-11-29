@@ -15,6 +15,7 @@ Install
 =======
 
 * Copy to /usr/share/themes/ and select it in which ever way you normally do.
+* Use with Faenza-Darker. It looks fantastic.
 
 License
 =======

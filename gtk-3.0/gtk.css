@@ -12,7 +12,7 @@
 @define-color text_color #eeeeee; /*#2c2c2c;*/
 @define-color selected_bg_color #0390c4; /* #accd8a; */
 @define-color selected_fg_color #eeeeee;
-@define-color tooltip_bg_color #373737;
+@define-color tooltip_bg_color #343434;
 @define-color tooltip_fg_color #eeeeee;
 
 /* other color schemes could simply override these */
@@ -70,25 +70,25 @@
 @define-color theme_border_color_b #191919;
 @define-color scrollslider_gradient_a #282828;
 @define-color scrollslider_gradient_b #242424;
-@define-color scrollslider_border #222222;
+@define-color scrollslider_border #333333;
 @define-color listview_header_gradient_a #333333;
 @define-color listview_header_gradient_b #272727;
 @define-color listview_border #373737;
 @define-color sidebar_color #363636;
 
 @define-color trough_bg_color_a #333333;
-@define-color trough_bg_color_b #373737;
+@define-color trough_bg_color_b #343434;
 
 @define-color treeview_even #333333;
 @define-color treeview_odd #272727;
 
-@define-color os_chrome_bg_color black;
-@define-color os_chrome_fg_color #fff;
-@define-color os_chrome_selected_bg_color #333;
-@define-color os_chrome_selected_fg_color white;
+@define-color os_chrome_bg_color #272727;
+@define-color os_chrome_fg_color #eeeeee;
+@define-color os_chrome_selected_bg_color #0390c5;
+@define-color os_chrome_selected_fg_color #eeeeee;
 
-@define-color chrome_bg_color #1e1a17;
-@define-color chrome_fg_color #fff;
+@define-color chrome_bg_color #363636;
+@define-color chrome_fg_color #eeeeee;
 
 @import url("gtk-widgets.css");
 @import url("apps/gnome-panel.css");
