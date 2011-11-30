@@ -15,7 +15,11 @@ Install
 =======
 
 * Copy to /usr/share/themes/ and select it in which ever way you normally do.
-* Use with Faenza-Darker. It looks fantastic.
+
+### Suggestions
+* Icon theme: Faenza-Darkest
+* GNOME-shell: 
+[Gnomarch](http://alucryd.deviantart.com/art/Gnome-Shell-GnomArch-245249611)
 
 License
 =======
@@ -26,12 +30,9 @@ this URL yet?)
 
 TODO
 ====
-* Fix tooltips.
-* Fix text color in some list views.
-* Minor text color things
+* Fix tooltip colors. Something funky is going on.
+* Get GTK2 to look as much like GTK3 as possible.
 * Unity support
-* GDM color tweaks
-* GNOME-shell overhaul
 
 Thanks To
 =========
