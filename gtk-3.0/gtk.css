@@ -6,7 +6,7 @@
 */
 
 /* default color scheme */
-@define-color bg_color #272727; /*#dcdcdc;*/
+@define-color bg_color #292929; /*#dcdcdc;*/
 @define-color fg_color #eeeeee; /*#2c2c2c;*/
 @define-color base_color #363636;
 @define-color text_color #eeeeee; /*#2c2c2c;*/
@@ -70,7 +70,7 @@
 @define-color theme_border_color_b #191919;
 @define-color scrollslider_gradient_a #282828;
 @define-color scrollslider_gradient_b #242424;
-@define-color scrollslider_border #333333;
+@define-color scrollslider_border #484848;
 @define-color listview_header_gradient_a #333333;
 @define-color listview_header_gradient_b #272727;
 @define-color listview_border #373737;

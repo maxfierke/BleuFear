@@ -30,9 +30,9 @@ this URL yet?)
 
 TODO
 ====
-* Fix tooltip colors. Something funky is going on.
+
 * Get GTK2 to look as much like GTK3 as possible.
-* Unity support
+* Make a GNOME-shell theme.
 
 Thanks To
 =========

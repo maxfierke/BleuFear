@@ -10,7 +10,7 @@
 # NOTE: Uncommenting means to delete the "#" at the beginning of a line. Commenting means to add a "#" at the beginning of a line. The "#" tells the theme wether to ignore the specified line or not.
 
 # These are the defined colors for the theme, you can change them in GNOME's appearance preferences.
-gtk_color_scheme = "bg_color:#272727\nselected_bg_color:#0390c4\nbase_color:#363636" # Background, base.
+gtk_color_scheme = "bg_color:#292929\nselected_bg_color:#0390c4\nbase_color:#363636" # Background, base.
 gtk_color_scheme = "fg_color:#eeeeee\nselected_fg_color:#eeeeee\ntext_color:#eeeeee" # Foreground, text.
 gtk_color_scheme = "tooltip_bg_color:#343434\ntooltip_fg_color:#eeeeee" # Tooltips.
 gtk_color_scheme = "link_color:#08c" # Hyperlinks
