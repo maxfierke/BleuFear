@@ -149,18 +149,18 @@ style "murrine-default" {
 		listviewheaderstyle	= 1			# 0 = flat, 1 = glassy, 2 = raised
 		listviewstyle		= 1			# 0 = nothing, 1 = dotted
 		menubaritemstyle	= 0			# 0 = menuitem look, 1 = button look
-		menubarstyle		= 2			# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
+		menubarstyle		= 0			# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
 		menuitemstyle		= 0			# 0 = flat, 1 = glassy, 2 = striped
 		menustyle		= 0			# 0 = no vertical menu stripe, 1 = display vertical menu stripe
 		prelight_shade		= .95			# shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors		
 		reliefstyle		= 2			# 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
-		rgba			= FALSE			# FALSE = disabled, TRUE = enabled
+		rgba			= TRUE			# FALSE = disabled, TRUE = enabled
 		roundness		= 2			# 0 = squared, 1 = old default, more will increase roundness
-		scrollbarstyle		= 0			# 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
+		scrollbarstyle		= 2			# 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
 		separatorstyle		= 1			# 0 = Hard seperators 1 = Smooth seperators
-		sliderstyle		= 0			# 0 = nothing added, 1 = handles
+		sliderstyle		= 1			# 0 = nothing added, 1 = handles
 		stepperstyle		= 1			# 0 = standard, 1 = integrated stepper handles, 2 = unknown
-		progressbarstyle	= 0			# 0 = nothing, 1 = stripes, 2 = lines
+		progressbarstyle	= 1			# 0 = nothing, 1 = stripes, 2 = lines
 		shadow_shades		= {0.5, 0.0}		# gradient for shadows.		
 		textstyle		= 1			# 0 = normal text, 1 = inset		
 		toolbarstyle		= 2			# 0 = flat, 1 = glassy, 2 = gradient		
@@ -354,7 +354,7 @@ style "murrine-progressbar" = "murrine-thin" {
 		trough_shades		= { 1.06, 1.16}
 		gradient_shades		= {0.95,0.95,1.1,1.1}
 		border_shades		= { 1.1, 1.1 }
-		roundness		= 0
+		roundness		= 2
 	}
 }
 
@@ -385,14 +385,17 @@ style "murrine-scale" = "murrine-wider" {
 }
 
 style "murrine-scrollbar" {
-	bg[NORMAL]	= shade (0.90, @bg_color)
-	bg[SELECTED]	= shade (0.6, @base_color)
-	bg[ACTIVE]	= shade (0.8, @bg_color)
-	bg[PRELIGHT]	= shade (0.8, @bg_color)
+	bg[NORMAL]	= shade (0.6, @selected_bg_color)
+	bg[SELECTED]	= shade (0.7, @selected_bg_color)
+	bg[ACTIVE]	= shade (0.7, @selected_bg_color)
+	bg[PRELIGHT]	= shade (0.7, @selected_bg_color)
+	
+	GtkScrollbar::trough-border = 2
 	
 	engine "murrine" {
 		roundness	= 8
-		border_shades	= {0.80, 0.80}
+		border_shades	= {1.0, 1.0}
+		
 		contrast	= 0.0
 	}
 }
