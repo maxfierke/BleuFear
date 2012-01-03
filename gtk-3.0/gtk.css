@@ -68,9 +68,9 @@
 
 @define-color theme_border_color_a #232323;
 @define-color theme_border_color_b #191919;
-@define-color scrollslider_gradient_a #282828;
-@define-color scrollslider_gradient_b #242424;
-@define-color scrollslider_border #484848;
+@define-color scrollslider_gradient_a shade (@selected_bg_color, 0.8);
+@define-color scrollslider_gradient_b shade (@selected_bg_color, 0.7);
+@define-color scrollslider_border shade (@selected_bg_color, 0.7);
 @define-color listview_header_gradient_a #333333;
 @define-color listview_header_gradient_b #272727;
 @define-color listview_border #373737;
