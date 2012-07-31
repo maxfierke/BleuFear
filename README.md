@@ -29,6 +29,7 @@ Thanks To
 =========
 - Linux Mint Team - Created the Mint-Z theme collection of which this is 
 based on.
+- Karashata - Made Mint-Z much better (and thus BleuFear much better).
 - grvrulz - Created the metacity theme which I shamelessly 
 stole. (from Hope gtk3)
 - Illuna - Created the xfwm4 theme which I shamelessly stole. (from Hope 

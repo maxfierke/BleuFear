@@ -1,4 +1,6 @@
-# Author: lassekongo83
+# Author: karashata
+# Modified from Zukitwo by lassekongo83
+# Modified from Mint-Z Improved by Max Fierke
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -41,6 +43,7 @@ style "murrine-default" {
 	GtkButton	::child-displacement-x		= 1
 	GtkButton	::child-displacement-y		= 1
 	GtkButton	::default-border		= { 0, 0, 0, 0 }
+	GtkButtonBox	::child-min-height		= 26
 	GtkCheckButton	::indicator-size		= 15
 	
 	GtkWidget	::new-tooltip-style		= 1
@@ -48,6 +51,8 @@ style "murrine-default" {
 	GtkWidget	::focus-padding			= 0 # Keeping this at 0 prevents the Firefox tabs from jumping a few pixels when you create a new tab. Set the value locally if needed.
 
 	GtkImage	::x-ayatana-indicator-dynamic	= 1
+
+	GtkScale	::trough-side-details		= 1
 
 	GtkScrollbar	::has-backward-stepper		= 0  
 	GtkScrollbar	::has-forward-stepper		= 0
@@ -80,6 +85,7 @@ style "murrine-default" {
 
 	GtkMenu		::horizontal-padding		= 0
 	GtkMenu		::vertical-padding		= 0
+	GtkMenuItem	::horizontal-padding		= 0
 
 	WnckTasklist	::fade-overlay-rect		= 0
 	# The following line hints to gecko (and possibly other appliations)
@@ -95,6 +101,7 @@ style "murrine-default" {
 	#GtkToolbar	::shadow-type = GTK_SHADOW_NONE # Makes toolbars flat and unified.
 	#GtkMenuBar	::shadow-type = GTK_SHADOW_NONE # Makes menus flat and unified.
 	GtkMenuBar	::window-dragging		= 1
+	GtkToolbar	::window-dragging		= 1
 
 	# The little ugly gripper at the bottom right needs to go. Loss of usability for the
 	# sake of a more good-looking theme. You can remove this if you don't use Ubuntu 11.04.
@@ -219,6 +226,7 @@ style "murrine-button" = "murrine-wider" {
   	engine "murrine" {
 		contrast		= .8
 		lightborder_shade	= 1.9
+		roundness		= 1
 	}
 }
 
@@ -230,7 +238,7 @@ style "murrine-notebook-bg" {
 
 style "murrine-notebook" = "murrine-notebook-bg" {
 	xthickness = 2 # Width of tabs and notebook borders.
-	ythickness = 2 # Height of tabs and notebook borders.
+	ythickness = 1 # Height of tabs and notebook borders.
 
 	engine "murrine" {
 		contrast		= .8
@@ -243,21 +251,24 @@ style "murrine-notebook" = "murrine-notebook-bg" {
 style "notebook-close" { stock["gtk-close"] = {{ "widgets/Others/close.png", *, *, * }} } # Close icon on tabs
 
 style "murrine-menubar" = "murrine-default" {
+	ythickness	= 0
 	bg[NORMAL]	= @bg_color
 	fg[NORMAL]	= @fg_color
-	fg[PRELIGHT]	= @fg_color
-	fg[SELECTED]	= @fg_color
+	fg[PRELIGHT]	= @selected_fg_color
+	fg[SELECTED]	= @selected_fg_color
 }
 
 style "murrine-menubar-menuitem" = "murrine-wider" {
-	bg[PRELIGHT]   = @selected_bg_color
-	bg[SELECTED]   = @bg_color
-
+	xthickness	= 6
+	bg[PRELIGHT]	= @selected_bg_color
+	bg[SELECTED]	= @selected_bg_color
+	fg[PRELIGHT]	= @selected_fg_color
+	fg[SELECTED]	= @selected_fg_color
 	engine "murrine" {
 		contrast = .0 
 		roundness = 0
-		border_shades = { 1.0, 0.8 }
-		gradient_shades = {1.0, 1.0, 0.85, 0.85}
+		border_shades = { 1.0, 0.85 }
+		gradient_shades	= {1.0,1.0,0.85,0.85}
 	}
 }
 
@@ -347,6 +358,7 @@ style "murrine-progressbar" = "murrine-thin" {
 	bg[ACTIVE]	= shade (0.85, @bg_color)
 	bg[SELECTED]	= shade (1.0, @selected_bg_color)  
 	bg[INSENSITIVE]	= shade (0.95, @bg_color)
+	fg[PRELIGHT]		= @selected_fg_color
 
 	engine "murrine" {
 		contrast		= 1.0
@@ -633,6 +645,8 @@ widget "*OOoFixed*"			style "performance-fix" # Openoffice/Libreoffice
 widget_class "*MozContainer*"		style "performance-fix" # Firefox (Not sure if this one does anything though.)
 
 ### EXTERNAL FILES ###
+include "apps/chromium.rc"	# Chromium styling
+include "apps/terminal.rc"	# Terminal styling
 include "apps/gedit.rc"		# Gedit styling
 include "apps/pcmanfm.rc"	# PCManFM styling
 include "apps/nautilus-e.rc"	# Nautilus styling. Replace with nautilus-e.rc if you're using Nautilus-elementary or nautilus.rc if you're using normal Nautilus.

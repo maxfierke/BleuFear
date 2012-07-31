@@ -1,16 +1,16 @@
 /* 
-	AUTHOR: lassekongo83
-	WEBSITE: http://lassekongo83.deviantart.com
+	AUTHOR: Max Fierke (m4xm4n)
+	WEBSITE: http://m4xm4n.deviantart.com | https://github.com/maxfierke/bleufear
 	LICENSE: GPL
-	DESCRIPTION: A minimalistic and usable theme made for gtk3 apps.
+	DESCRIPTION: A dark theme with a wild streak of electric blue.
 */
 
 /* default color scheme */
-@define-color bg_color #292929; /*#dcdcdc;*/
-@define-color fg_color #eeeeee; /*#2c2c2c;*/
+@define-color bg_color #292929;
+@define-color fg_color #eeeeee;
 @define-color base_color #363636;
-@define-color text_color #eeeeee; /*#2c2c2c;*/
-@define-color selected_bg_color #0390c4; /* #accd8a; */
+@define-color text_color #eeeeee;
+@define-color selected_bg_color #0390c4;
 @define-color selected_fg_color #eeeeee;
 @define-color tooltip_bg_color #343434;
 @define-color tooltip_fg_color #eeeeee;
@@ -40,58 +40,31 @@
 /* theme common colors */
 @define-color button_bg_color shade (#303030, 1.06);
 @define-color button_insensitive_bg_color mix (@button_bg_color, @bg_color, 0.6);
-@define-color dark_bg_color #272727; /*#3f3f3f;*/
-@define-color dark_fg_color #eeeeee; /*#e0e0e0; */
+@define-color dark_bg_color #272727;
+@define-color dark_fg_color #eeeeee;
 @define-color transparent rgba (0, 0, 0, 0);
 
+@define-color backdrop_selected_bg_color shade (@theme_selected_bg_color, 1.12);
+@define-color backdrop_selected_fg_color @theme_selected_fg_color;
+
 /* Zukitwo colors */
-@define-color toolbar_gradient_base #363636; /* #dcdcdc; */
-@define-color toolbar_gradient_final #272727; /* #d1d1d1; */
+@define-color toolbar_gradient_base #363636;
+@define-color toolbar_gradient_final #272727;
 @define-color toolbar_border #313131;
 
-@define-color button_gradient_color_a #363636; /* #fbfbfb;*/
-@define-color button_gradient_color_b #272727; /* #dedede; */
-@define-color button_hover_gradient_color_a shade (@button_gradient_color_a, 1.10);
-@define-color button_hover_gradient_color_b shade (@button_gradient_color_b, 1.10);
-@define-color button_active_gradient_color_a shade (@button_gradient_color_b, 0.80);
-@define-color button_active_gradient_color_b shade (@button_gradient_color_a, 0.80);
+/* WM colors */
+@define-color wm_title @theme_fg_color;
+@define-color wm_highlight shade (@theme_bg_color, 1.2);
+@define-color wm_title_highlight shade (@theme_bg_color, 1.2);
 
-@define-color progressbar_through_a #272727;
-@define-color progressbar_through_b #363636;
-@define-color progressbar_through_border #333333;
-@define-color progressbar_background_a #0390c4; /* #accd8a; */
-@define-color progressbar_background_b #0390C5; /* #c3dea8; */
-@define-color progressbar_border #6487AA; /* #87a964; */
-
-@define-color menuitem_background_a #0390c5;
-@define-color menuitem_background_b #0390C4;
-
-@define-color theme_border_color_a #232323;
-@define-color theme_border_color_b #191919;
-@define-color scrollslider_gradient_a shade (@selected_bg_color, 0.8);
-@define-color scrollslider_gradient_b shade (@selected_bg_color, 0.7);
-@define-color scrollslider_border shade (@selected_bg_color, 0.7);
-@define-color listview_header_gradient_a #333333;
-@define-color listview_header_gradient_b #272727;
-@define-color listview_border #373737;
-@define-color sidebar_color #363636;
-
-@define-color trough_bg_color_a #333333;
-@define-color trough_bg_color_b #343434;
-
-@define-color treeview_even #333333;
-@define-color treeview_odd #272727;
-
-@define-color os_chrome_bg_color #272727;
-@define-color os_chrome_fg_color #eeeeee;
-@define-color os_chrome_selected_bg_color #0390c5;
-@define-color os_chrome_selected_fg_color #eeeeee;
-
-@define-color chrome_bg_color #363636;
-@define-color chrome_fg_color #eeeeee;
+@define-color wm_bg_a shade (@theme_bg_color, 1.1);
+@define-color wm_bg_b @theme_bg_color;
 
 @import url("gtk-widgets.css");
+@import url("apps/gedit.css");
 @import url("apps/gnome-panel.css");
-@import url("apps/gnome-applications.css");
+@import url("apps/gnome-terminal.css");
 @import url("apps/nautilus.css");
 @import url("apps/unity.css");
+@import url("apps/popover.css");
+@import url("apps/epiphany.css");

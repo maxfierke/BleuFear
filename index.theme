@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=BleuFear
+Comment=A dark theme with a wild streak of electric blue.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=BleuFear
+MetacityTheme=Hope
+IconTheme=Faenza-Darkest
+CursorTheme=default
+
