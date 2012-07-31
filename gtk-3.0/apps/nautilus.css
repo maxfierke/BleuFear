@@ -42,7 +42,7 @@ NautilusWindow .view.rubberband {
 
 /* desktop mode */
 .nautilus-desktop.nautilus-canvas-item {
-	color: @theme_bg_color;
+	color: @theme_fg_color;
 	text-shadow: 1 1 alpha (#000000, 0.8);
 }
 
