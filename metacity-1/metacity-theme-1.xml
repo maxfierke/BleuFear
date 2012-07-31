@@ -2,37 +2,37 @@
 
 <metacity_theme>
 <info>
-  	<name>Hope Metacity Theme</name>
-  	<author>Reda Lazri(rAX)</author>
-  	<copyright>GPL</copyright>
-  	<date>Saturday November 20 2010 </date>
-  	<description>A slightly moded "Before Dawn"</description>
+	<name>Adwaita-X dark</name>
+	<author>KEIII</author>
+	<copyright>GPL</copyright>
+	<date>2012</date>
+	<description>Metacity theme</description>
 </info>
 
 <!-- General window layout -->
 <frame_geometry name="frame_geometry_normal" title_scale="medium" rounded_top_left="true" rounded_top_right="true"  rounded_bottom_left="false" rounded_bottom_right="false">
- 	<distance name="left_width" value="2"/>
-	<distance name="right_width" value="2"/>
-	<distance name="bottom_height" value="2"/>
-	<distance name="left_titlebar_edge" value="7"/>
-	<distance name="right_titlebar_edge" value="7"/>
-	<distance name="button_width" value="22"/>
+ 	<distance name="left_width" value="1"/>
+	<distance name="right_width" value="1"/>
+	<distance name="bottom_height" value="1"/>
+	<distance name="left_titlebar_edge" value="6"/>
+	<distance name="right_titlebar_edge" value="6"/>
+	<distance name="button_width" value="24"/>
 	<distance name="button_height" value="24"/>
 	<distance name="title_vertical_pad" value="8"/>
-	<border name="title_border" left="0" right="0" top="0" bottom="0"/>
+	<border name="title_border" left="2" right="2" top="0" bottom="0"/>
 	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
 
 <frame_geometry name="frame_geometry_abnormal" title_scale="medium" rounded_top_left="false" rounded_top_right="false">
   	<distance name="left_width" value="0"/>
   	<distance name="right_width" value="0"/>
-  	<distance name="bottom_height" value="1"/>
-  	<distance name="left_titlebar_edge" value="7"/>
-  	<distance name="right_titlebar_edge" value="7"/>
-  	<distance name="button_width" value="22"/>
+  	<distance name="bottom_height" value="0"/>
+  	<distance name="left_titlebar_edge" value="6"/>
+  	<distance name="right_titlebar_edge" value="6"/>
+  	<distance name="button_width" value="24"/>
  	<distance name="button_height" value="24"/>
   	<distance name="title_vertical_pad" value="2"/>
-  	<border name="title_border" left="0" right="0" top="0" bottom="0"/>
+  	<border name="title_border" left="2" right="2" top="0" bottom="0"/>
 	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
 
@@ -40,19 +40,19 @@
 	<distance name="left_width" value="0"/>
 	<distance name="right_width" value="0"/>
 	<distance name="bottom_height" value="0"/>
-	<distance name="left_titlebar_edge" value="10"/>
-  	<distance name="right_titlebar_edge" value="10"/>
-  	<distance name="button_width" value="22"/>
+	<distance name="left_titlebar_edge" value="4"/>
+  	<distance name="right_titlebar_edge" value="4"/>
+  	<distance name="button_width" value="24"/>
   	<distance name="button_height" value="24"/>
   	<distance name="title_vertical_pad" value="8"/>
-  	<border name="title_border" left="0" right="0" top="0" bottom="0"/>
+  	<border name="title_border" left="2" right="2" top="0" bottom="0"/>
  	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
 
 <frame_geometry name="border" has_title="false">
-  	<distance name="left_width" value="2"/>
-  	<distance name="right_width" value="2"/>
-  	<distance name="bottom_height" value="2"/>
+  	<distance name="left_width" value="3"/>
+  	<distance name="right_width" value="3"/>
+  	<distance name="bottom_height" value="3"/>
   	<distance name="left_titlebar_edge" value="0"/>
   	<distance name="right_titlebar_edge" value="0"/>
   	<distance name="button_width" value="0"/>
@@ -65,51 +65,106 @@
 <!-- Window Title -->
 
 <draw_ops name="draw_title_text_normal">
-	<title color="#000000" x="3 `max` (width-title_width)/2" y="0 `max` ((height-title_height)/2)"/>
-	<title color="#D6D6D6" x="3 `max` (width-title_width)/2" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="#202020" x="3 `max` (width-title_width)/2" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="#f7f7f7" x="3 `max` (width-title_width)/2" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <draw_ops name="draw_title_text_inactive">
-	<title color="#0F0F0F" x="3 `max` (width-title_width)/2" y="0 `max` ((height-title_height)/2)"/>
-	<title color="#807B7B" x="3 `max` (width-title_width)/2" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="#202020" x="4 `max` (width-title_width)/2+1" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="#bbbbbb" x="3 `max` (width-title_width)/2" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <draw_ops name="draw_title">
-	<image filename="top_left.png" x="0" y="0" width="object_width" height="height"/>
-	<image filename="top.png" x="7" y="0" width="width - 7" height="height"/>
-	<image filename="top_right.png" x="width - object_width" y="0" width="object_width" height="height"/>
+	<!-- Background gradient -->
+	<gradient type="vertical" x="0" y="0" width="width" height="top_height">
+		<color value="#323232" />
+		<color value="#282828" />
+		<color value="#282828" />
+	</gradient>
+	
+	<!-- Titlebar outline -->
+	<rectangle color="shade/#202020/1.2" filled="false" x="0" y="0" width="width - 1" height="top_height - 0"/>
+
+	<!-- Topmost lines -->
+	<line color="shade/#202020/1.2" x1="0" x2="width" y1="0" y2="0"/>
+	<line color="shade/#444/1.1" x1="0" x2="width" y1="1" y2="1"/>
+	
+	<!-- Darkening of the left arch -->
+	<line color="shade/#202020/1.2" x1="0" x2="4" y1="1" y2="1"/>
+	<line color="shade/#202020/1.2" x1="0" x2="2" y1="2" y2="2"/>
+	<line color="shade/#202020/1.2" x1="0" x2="1" y1="3" y2="3"/>
+	<line color="shade/#202020/1.2" x1="0" x2="1" y1="4" y2="4"/>
+	
+	<line color="shade/#202020/1.2" x1="width-5" x2="width" y1="1" y2="1"/>
+	<line color="shade/#202020/1.2" x1="width-3" x2="width" y1="2" y2="2"/>
+	<line color="shade/#202020/1.2" x1="width-2" x2="width" y1="3" y2="3"/>
+	<line color="shade/#202020/1.2" x1="width-2" x2="width" y1="4" y2="4"/>
+
+	<line color="shade/#202020/0.9" x1="1" y1="top_height - 0" x2="width - 2" y2="top_height - 0"/>
+</draw_ops>
+
+<draw_ops name="draw_title_unfocused">
+	<!-- Background gradient -->
+	<gradient type="vertical" x="0" y="0" width="width+9" height="height">
+		<color value="#343434" />
+		<color value="#323232" />
+		<color value="#282828" />
+	</gradient>
+
+	<!-- Titlebar outline -->
+	<rectangle color="shade/#202020/1.2" filled="false" x="0" y="0" width="width - 1" height="top_height - 0"/>
+
+	<!-- Darkening of the left arch -->
+	<line color="shade/#202020/1.2" x1="0" x2="4" y1="1" y2="1"/>
+	<line color="shade/#202020/1.2" x1="0" x2="2" y1="2" y2="2"/>
+	<line color="shade/#202020/1.2" x1="0" x2="1" y1="3" y2="3"/>
+	<line color="shade/#202020/1.2" x1="0" x2="1" y1="4" y2="4"/>
+	
+	<line color="shade/#202020/1.2" x1="width-5" x2="width" y1="1" y2="1"/>
+	<line color="shade/#202020/1.2" x1="width-3" x2="width" y1="2" y2="2"/>
+	<line color="shade/#202020/1.2" x1="width-2" x2="width" y1="3" y2="3"/>
+	<line color="shade/#202020/1.2" x1="width-2" x2="width" y1="4" y2="4"/>
 </draw_ops>
 
 <draw_ops name="draw_title_inactive">
-	<image filename="top_left.png" x="0" y="0" width="object_width" height="height"/>
-	<image filename="top.png" x="7" y="0" width="width - 7" height="height"/>
-	<image filename="top_right.png" x="width - object_width" y="0" width="object_width" height="height"/>
+	<include name="draw_title_unfocused" />
 </draw_ops>
 
 <draw_ops name="draw_title_maximized">
-	<image filename="top.png" x="0" y="0" width="object_width" height="height"/>
-	<image filename="top.png" x="0" y="0" width="width - 0" height="height"/>
-	<image filename="top.png" x="width - object_width" y="0" width="object_width" height="height"/>
+	<!-- Background gradient -->
+	<gradient type="vertical" x="0" y="0" width="width" height="top_height">
+		<color value="#323232" />
+		<color value="#282828" />
+		<color value="#282828" />
+	</gradient>
+</draw_ops>
+
+<draw_ops name="draw_title_maximized_unfocused">
+	<!-- Background gradient -->
+	<gradient type="vertical" x="0" y="0" width="width" height="top_height">
+		<color value="#343434" />
+		<color value="#323232" />
+		<color value="#282828" />
+	</gradient>
 </draw_ops>
 
 <draw_ops name="draw_title_maximized_inactive">
-	<include name="draw_title_maximized" />
+	<include name="draw_title_maximized_unfocused" />
 </draw_ops>
 
 <!-- Window Frames -->
 
-<draw_ops name="frame-left-focused">
-	<image filename="left.png" x="0" y="0" width="width" height="height"/>
+<draw_ops name="draw_frame">
+	<rectangle color="shade/gtk:bg[NORMAL]/0.3" x="0" y="0" width="width" height="height" filled="true"/>
+	<gradient type="vertical" x="0" y="0" width="width" height="60">
+		<color value="shade/#202020/1.2" />
+		<color value="shade/gtk:bg[NORMAL]/0.3" />
+	</gradient>
 </draw_ops>
 
-<draw_ops name="frame-right-focused">
-	<image filename="right.png" x="0" y="0" width="width" height="height"/>
-</draw_ops>
-
-<draw_ops name="frame-bottom-focused">
-	<image filename="bottom_left.png" x="0" y="0" width="object_width" height="height"/>
-	<image filename="bottom.png" x="2" y="0" width="width - 4" height="height"/>
-	<image filename="bottom_right.png" x="width - object_width" y="0" width="object_width" height="height"/>
+<!-- bottom border -->
+<draw_ops name="bottom_edge">
+	<line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="height-1" y2="height-1"/>
 </draw_ops>
 
 <draw_ops name="border">
@@ -119,182 +174,182 @@
 	<line color="shade/gtk:bg[NORMAL]/1.4" x1="1" y1="1" x2="1" y2="height - 2"/>
 	
 	<rectangle color="shade/gtk:bg[NORMAL]/0.25" filled="false"
-	           x="0" y="0"
-	           width="width - 1"
-	           height="height - 1"/>
+			   x="0" y="0"
+			   width="width - 1"
+			   height="height - 1"/>
 </draw_ops>
 
 <!-- BUTTONS -->
 
 <!-- Button Trough Left -->
 	<draw_ops name="left_left_background_focused_normal">
-		<image filename="trough_left.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_left.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_left_background_focused_pressed">
-		<image filename="trough_left.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_left.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_middle_background_focused_normal">
-		<image filename="trough_middle.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_middle.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_middle_background_focused_pressed">
-		<image filename="trough_middle.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_middle.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_right_background_focused_normal">
-		<image filename="trough_right.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_right.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_right_background_focused_pressed">
-		<image filename="trough_right.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_right.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_left_background_unfocused_normal">
-		<image filename="trough_left.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_left.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_left_background_unfocused_pressed">
-		<image filename="trough_left.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_left.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_middle_background_unfocused_normal">
-		<image filename="trough_middle.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_middle.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_middle_background_unfocused_pressed">
-		<image filename="trough_middle.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_middle.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_right_background_unfocused_normal">
-		<image filename="trough_right.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_right.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="left_right_background_unfocused_pressed">
-		<image filename="trough_right.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_right.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	
 <!-- Button Trough Right -->
 	<draw_ops name="right_left_background_focused_normal">
-		<image filename="trough_left.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_left.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_left_background_focused_pressed">
-		<image filename="trough_left.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_left.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_middle_background_focused_normal">
-		<image filename="trough_middle.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_middle.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_middle_background_focused_pressed">
-		<image filename="trough_middle.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_middle.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_right_background_focused_normal">
-		<image filename="trough_right.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_right.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_right_background_focused_pressed">
-		<image filename="trough_right.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_right.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_left_background_unfocused_normal">
-		<image filename="trough_left.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_left.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_left_background_unfocused_pressed">
-		<image filename="trough_left.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_left.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_middle_background_unfocused_normal">
-		<image filename="trough_middle.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_middle.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_middle_background_unfocused_pressed">
-		<image filename="trough_middle.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_middle.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_right_background_unfocused_normal">
-		<image filename="trough_right.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_right.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="right_right_background_unfocused_pressed">
-		<image filename="trough_right.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="trough_right.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	
-<!-- Button Overlays -->
+<!-- Button prelightlays -->
 	<draw_ops name="menu_focused_normal">
-   	<image filename="menu.png" x="0" y="1" width="object_width" height="object_height"/>
+   	<image filename="menu_focused.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 		<draw_ops name="menu_focused_prelight">
-  	 <image filename="menu_prelight.png" x="0" y="1" width="object_width" height="object_height"/>
+  	 <image filename="menu_focused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="menu_unfocused_normal">
-  	 	<image filename="menu.png" x="0" y="1" width="object_width" height="object_height"/>
+  	 	<image filename="menu_unfocused.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="menu_unfocused_prelight">
-   		<image filename="menu_prelight.png" x="0" y="1" width="object_width" height="object_height"/>
+   		<image filename="menu_unfocused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="minimize_focused_normal">
-		<image filename="minimize.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="minimize_focused_normal.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="minimize_focused_prelight">
-		<image filename="minimize_over.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="minimize_focused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="minimize_focused_pressed">
-		<image filename="minimize_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="minimize_focused_pressed.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="minimize_unfocused_normal">
-		<image filename="minimize_unfocused.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="minimize_unfocused.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="minimize_unfocused_prelight">
-		<image filename="minimize_unfocused_over.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="minimize_unfocused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="minimize_unfocused_pressed">
-		<image filename="minimize_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="minimize_unfocused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="maximize_focused_normal">
-		<image filename="maximize.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="maximize_focused_normal.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="maximize_focused_prelight">
-		<image filename="maximize_over.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="maximize_focused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="maximize_focused_pressed">
-		<image filename="maximize_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="maximize_focused_pressed.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="maximize_unfocused_normal">
-		<image filename="maximize_unfocused.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="maximize_unfocused.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="maximize_unfocused_prelight">
-		<image filename="maximize_unfocused_over.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="maximize_unfocused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="maximize_unfocused_pressed">
-		<image filename="maximize_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="maximize_unfocused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="unmaximize_focused_normal">
-		<image filename="unmaximize.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="unmaximize_focused_normal.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="unmaximize_focused_prelight">
-		<image filename="unmaximize_over.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="unmaximize_focused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="unmaximize_focused_pressed">
-		<image filename="unmaximize_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="unmaximize_focused_pressed.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="unmaximize_unfocused_normal">
-		<image filename="unmaximize_unfocused.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="unmaximize_unfocused.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="unmaximize_unfocused_prelight">
-		<image filename="unmaximize_unfocused_over.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="unmaximize_unfocused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="unmaximize_unfocused_pressed">
-		<image filename="unmaximize_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="unmaximize_unfocused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="close_focused_normal">
-		<image filename="close.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="close_focused_normal.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="close_focused_prelight">
-		<image filename="close_over.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="close_focused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="close_focused_pressed">
-		<image filename="close_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="close_focused_pressed.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="close_unfocused_normal">
-		<image filename="close_unfocused.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="close_unfocused.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="close_unfocused_prelight">
-		<image filename="close_unfocused_over.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="close_unfocused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 	<draw_ops name="close_unfocused_pressed">
-		<image filename="close_unfocused_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
+		<image filename="close_unfocused_prelight.png" x="0" y="5" width="object_width" height="object_height"/>
 	</draw_ops>
 
 <!-- FRAME STYLE -->
 <frame_style name="normal_focused" geometry="frame_geometry_normal">
 	<piece position="title" draw_ops="draw_title_text_normal"/>
    	<piece position="titlebar" draw_ops="draw_title"/>
-   	<piece position="left_edge" draw_ops="frame-left-focused"/>
-   	<piece position="right_edge" draw_ops="frame-right-focused"/>
-   	<piece position="bottom_edge" draw_ops="frame-bottom-focused"/>
+   	<piece position="left_edge" draw_ops="draw_frame"/>
+   	<piece position="right_edge" draw_ops="draw_frame"/>
+   	<piece position="bottom_edge" draw_ops="bottom_edge"/>
 	<button function="left_left_background" state="normal" draw_ops="left_left_background_focused_normal"/>
 	<button function="left_middle_background" state="normal" draw_ops="left_middle_background_focused_normal"/>
 	<button function="left_right_background" state="normal" draw_ops="left_right_background_focused_normal"/>
@@ -330,9 +385,9 @@
 <frame_style name="normal_unfocused" geometry="frame_geometry_normal">
 	<piece position="title" draw_ops="draw_title_text_inactive"/>
    	<piece position="titlebar" draw_ops="draw_title_inactive"/>
-   	<piece position="left_edge" draw_ops="frame-left-focused"/>
-   	<piece position="right_edge" draw_ops="frame-right-focused"/>
-   	<piece position="bottom_edge" draw_ops="frame-bottom-focused"/>
+   	<piece position="left_edge" draw_ops="draw_frame"/>
+   	<piece position="right_edge" draw_ops="draw_frame"/>
+   	<piece position="bottom_edge" draw_ops="bottom_edge"/>
 	<button function="left_left_background" state="normal" draw_ops="left_left_background_unfocused_normal"/>
 	<button function="left_middle_background" state="normal" draw_ops="left_middle_background_unfocused_normal"/>
 	<button function="left_right_background" state="normal" draw_ops="left_right_background_unfocused_normal"/>
