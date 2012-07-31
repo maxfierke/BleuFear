@@ -779,7 +779,6 @@ column-header .button,
 
 column-header .button:hover,
 .notebook column-header .button:hover {
-	transition: none;
 	background-image: -gtk-gradient (linear, left top, left bottom,
 		from (shade (@theme_bg_color,1.2)),
 		to (shade (@theme_bg_color,1.1)));
@@ -2083,8 +2082,6 @@ GtkTextView {
 
 	color: @theme_fg_color;
 	text-shadow: 0 1 alpha (shade (@button_bg_color, 1.25), 0.4);
-
-	transition: none;
 
 	-unico-focus-border-radius: 2;
 	-unico-focus-border-color: alpha (@theme_selected_bg_color, 0.5);
