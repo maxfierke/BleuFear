@@ -19,6 +19,7 @@ or
 ### Suggestions
 - Icon theme: Faenza-Darkest
 - GNOME-shell: [Gnomarch](http://alucryd.deviantart.com/art/Gnome-Shell-GnomArch-245249611)
+- Cinnamon Theme: Minty-Colors
 
 License
 =======
@@ -30,8 +31,3 @@ Thanks To
 - Linux Mint Team - Created the Mint-Z theme collection of which this is 
 based on.
 - Karashata - Made Mint-Z much better (and thus BleuFear much better).
-- grvrulz - Created the metacity theme which I shamelessly 
-stole. (from Hope gtk3)
-- Illuna - Created the xfwm4 theme which I shamelessly stole. (from Hope 
-gtk3)
-- 0rAX0 - Creator of the original Hope GTK theme.
