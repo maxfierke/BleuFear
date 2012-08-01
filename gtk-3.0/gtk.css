@@ -1,6 +1,7 @@
 /* 
 	AUTHOR: Max Fierke (m4xm4n)
-	WEBSITE: http://m4xm4n.deviantart.com | https://github.com/maxfierke/bleufear
+	WEBSITE: http://m4xm4n.deviantart.com
+	         https://github.com/maxfierke/bleufear
 	LICENSE: GPL
 	DESCRIPTION: A dark theme with a wild streak of electric blue.
 */
@@ -47,7 +48,7 @@
 @define-color backdrop_selected_bg_color shade (@theme_selected_bg_color, 1.12);
 @define-color backdrop_selected_fg_color @theme_selected_fg_color;
 
-/* Zukitwo colors */
+/* BleuFear colors */
 @define-color toolbar_gradient_base #363636;
 @define-color toolbar_gradient_final #272727;
 @define-color toolbar_border #313131;
