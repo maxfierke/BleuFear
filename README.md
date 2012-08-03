@@ -31,3 +31,4 @@ Thanks To
 - Linux Mint Team - Created the Mint-Z theme collection of which this is 
 based on.
 - Karashata - Made Mint-Z much better (and thus BleuFear much better).
+- Ivan Kasenkov - Made the metacity, xfwm4, and unity theme that I took from his Adwaita-X-Dark.
