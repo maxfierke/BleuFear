@@ -39,7 +39,7 @@
 @define-color error_color #cc0000;
 
 /* theme common colors */
-@define-color button_bg_color shade (#303030, 1.06);
+@define-color button_bg_color shade (#363636, 1.10);
 @define-color button_insensitive_bg_color mix (@button_bg_color, @bg_color, 0.6);
 @define-color dark_bg_color #272727;
 @define-color dark_fg_color #eeeeee;
@@ -52,6 +52,9 @@
 @define-color toolbar_gradient_base #363636;
 @define-color toolbar_gradient_final #272727;
 @define-color toolbar_border #313131;
+
+@define-color theme_border_color_a #232323;
+@define-color theme_border_color_b #191919;
 
 /* WM colors */
 @define-color wm_title @theme_fg_color;
