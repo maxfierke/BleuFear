@@ -97,7 +97,6 @@ GtkWindow {
 }
 
 *:hover {
-	background-color: shade (@bg_color, 1.02);
 }
 
 *:hover:insensitive {
@@ -1142,7 +1141,6 @@ DbusmenuGtkMenu .menu,
 .primary-toolbar .menu.button:hover,
 .primary-toolbar .menu.button:active:hover {
 	background-image: none;
-	background-color: shade (@theme_base_color, 0.95);
 	border-radius: 0;
 	border-style: none;
 	border-width: 1px;
