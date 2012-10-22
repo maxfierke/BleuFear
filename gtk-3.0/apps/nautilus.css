@@ -43,7 +43,7 @@ NautilusWindow .view.rubberband {
 /* desktop mode */
 .nautilus-desktop.nautilus-canvas-item {
 	color: @theme_fg_color;
-	text-shadow: 1 1 alpha (#000000, 0.8);
+	text-shadow: 1px 1px alpha (#000000, 0.8);
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {
@@ -91,12 +91,12 @@ NautilusSearchBar .entry {
 
 .nautilus-cluebar-label {
 	font: normal;
-	text-shadow: 0 1 shade (@cluebar_color, 1.06);
+	text-shadow: 0px 1px shade (@cluebar_color, 1.06);
 }
 
 .nautilus-cluebar-label:backdrop {
 	color: mix (@theme_fg_color, @cluebar_color, 0.2);
-	text-shadow: 0 1 shade (@cluebar_color, 1.02);
+	text-shadow: 0px 1px shade (@cluebar_color, 1.02);
 }
 
 #nautilus-search-button *:active,
@@ -125,17 +125,17 @@ NautilusWindow .sidebar .view {
 	background-color: @theme_bg_color;
 
 	color: @theme_fg_color;
-	text-shadow: 0 1 shade (shade (@theme_bg_color, 0.95), 1.04);  
+	text-shadow: 0px 1px shade (shade (@theme_bg_color, 0.95), 1.04);
 }
 
 NautilusWindow .sidebar row:selected {
 	color: @theme_selected_fg_color;
-	text-shadow: 0 -1 shade (@theme_selected_bg_color, 0.8); 
+	text-shadow: 0px -1px shade (@theme_selected_bg_color, 0.8);
 }
 
 NautilusWindow .sidebar row:backdrop:selected {
 	color: @backdrop_selected_fg_color;
-	text-shadow: none; 
+	text-shadow: none;
 }
 
 NautilusWindow .sidebar .frame {
