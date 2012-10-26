@@ -45,7 +45,7 @@ PanelMenuBar.menubar.menuitem {
                                      to (shade(@theme_bg_color, 1.05)));
 }
 
-PanelAppletFrame { 
+PanelAppletFrame {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 1.5)),
                                      to (shade(@theme_bg_color, 1.05)));
@@ -74,7 +74,7 @@ PanelApplet .button:prelight:active,
 PanelApplet .button:active {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(@theme_bg_color, 0.85)),
-                                     to (shade(@theme_bg_color, 1.0))); 
+                                     to (shade(@theme_bg_color, 1.0)));
 
     border-color: shade(@theme_bg_color, 0.7);
     border-radius: 0;
@@ -182,6 +182,12 @@ NautilusWindow .pane-separator {
     background-color: shade(@theme_bg_color, 0.8);
 }
 
+NautilusWindow .sidebar .view {
+	background-color: @theme_bg_color;
+	color: @theme_fg_color;
+	text-shadow: 1px 1px alpha (#000000, 0.8);
+}
+
 /* gnome-terminal */
 TerminalScreen {
     background-color: @theme_base_color;
@@ -197,7 +203,7 @@ TerminalWindow GtkNotebook.notebook {
 /*********
  * gedit *
  *********/
-GeditWindow .pane-separator, 
+GeditWindow .pane-separator,
 GeditWindow .pane-separator:hover {
     border-width: 0 1px 1px 1px;
     border-style: solid;
