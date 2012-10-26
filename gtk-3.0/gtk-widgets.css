@@ -1374,12 +1374,10 @@ GtkScale.trough.vertical:insensitive,
 
 .scrollbar.trough,
 .scrollbar.trough.vertical {
-    background-image: -gtk-gradient(linear, left, right,
-                                     from (#e7e7e7),
-                                     to (#f7f7f7));
+    background-image: -gtk-gradient(linear, left, right, from (#e7e7e7), to (#f7f7f7));
 
     border-width: 0;
-    border-radius: 0
+    border-radius: 0;
 }
 
 .scrollbar.trough.horizontal {
@@ -2018,9 +2016,8 @@ GtkTextView {
     border-width: 1px;
 
     color: @theme_tooltip_fg_color;
-    font-size: 8.5pt;
+    font-size: 8.5;
     font-weight: normal;
-    text-align: center;
 }
 
 .tooltip * {
