@@ -95,7 +95,7 @@ style "evolve-default" {
 	fg[PRELIGHT] = @fg_color
 	fg[SELECTED] = @selected_fg_color
 	fg[ACTIVE] = @fg_color
-	fg[INSENSITIVE] = mix (0.5, @bg_color, @fg_color)
+	fg[INSENSITIVE] = darker (@bg_color)
 
 	bg[NORMAL] = @bg_color
 	bg[PRELIGHT] = shade (1.02, @bg_color)
@@ -113,7 +113,7 @@ style "evolve-default" {
 	text[PRELIGHT] = @text_color
 	text[ACTIVE] = @selected_fg_color
 	text[SELECTED] = @selected_fg_color
-	text[INSENSITIVE] = mix (0.5, @bg_color, @text_color)
+	text[INSENSITIVE] = darker (@bg_color)
 
 	engine "murrine" {
 		animation = FALSE
@@ -332,13 +332,11 @@ style "evolve-menu" {
 	fg[PRELIGHT] = @selected_fg_color
 	fg[SELECTED] = @selected_fg_color
 	fg[ACTIVE] = @selected_fg_color
-	fg[INSENSITIVE] = mix (0.85, shade (0.75, @bg_color), @fg_color)
 	text[NORMAL] = @text_color
 	base[NORMAL] = @base_color
 	text[PRELIGHT] = @selected_fg_color
 	text[SELECTED] = @selected_fg_color
 	text[ACTIVE] = @selected_fg_color
-	text[INSENSITIVE] = mix (0.85, shade (0.75, @bg_color), @fg_color)
 
 	engine "murrine" {
 		roundness = 0
@@ -377,12 +375,10 @@ style "evolve-menubar" {
 	fg[PRELIGHT] = @selected_fg_color
 	fg[SELECTED] = @selected_fg_color
 	fg[ACTIVE] = @selected_fg_color
-	fg[INSENSITIVE] = mix (0.85, shade (0.75, @bg_color), @fg_color)
 	text[NORMAL] = @text_color
 	text[PRELIGHT] = @selected_fg_color
 	text[SELECTED] = @selected_fg_color
 	text[ACTIVE] = @selected_fg_color
-	text[INSENSITIVE] = mix (0.85, shade (0.75, @bg_color), @fg_color)
 
 	engine "murrine" {
 		roundness = 0
