@@ -6,7 +6,6 @@ Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=BleuFear
-MetacityTheme=Hope
-IconTheme=Faenza-Darkest
+MetacityTheme=BleuFear
 CursorTheme=default
-
+ButtonLayout=close,minimize,maximize:

@@ -1,22 +1,14 @@
-ApDocView, /* Abiword */
-EogScrollView, /* Eog */
-CheeseThumbView /* Cheese */
-{
-    background-color: @dark_bg_color;
-    -EogScrollView-shadow-type: none;
-}
-
 /***********************
  * fallback mode panel *
  ***********************/
 PanelWidget,
 PanelApplet,
 PanelToplevel {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.5)),
-                                     to (shade(@theme_bg_color, 1.05)));
-
     padding: 0;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.1)),
+                                     to (shade(@theme_bg_color, 0.9)));
+
     color: @theme_fg_color;
 }
 
@@ -25,11 +17,11 @@ PanelApplet {
 }
 
 PanelSeparator {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.5)),
-                                     to (shade(@theme_bg_color, 1.05)));
-
     border-width: 0;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.1)),
+                                     to (shade(@theme_bg_color, 0.9)));
+
     color: @theme_fg_color;
 }
 
@@ -40,59 +32,45 @@ PanelMenuBar.menubar,
 PanelMenuBar.menubar.menuitem {
     -PanelMenuBar-icon-visible: true;
 
+    border-width: 0;
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.5)),
-                                     to (shade(@theme_bg_color, 1.05)));
+                                     from (shade(@theme_bg_color, 1.1)),
+                                     to (shade(@theme_bg_color, 0.9)));
 }
 
 PanelAppletFrame {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.5)),
-                                     to (shade(@theme_bg_color, 1.05)));
-
-    background-color: @theme_bg_color;
     border-width: 0;
+    background-color: @theme_bg_color; 
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.1)),
+                                     to (shade(@theme_bg_color, 0.9)));
 }
 
 PanelApplet .button {
     -GtkButton-inner-border: 2;
 
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.5)),
-                                     to (shade(@theme_bg_color, 1.05)));
-
-    border-color: shade(@theme_bg_color, 0.7);
+    border-width: 0;
     border-radius: 0;
-    border-width: 0 1px 0 1px;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.1)),
+                                     to (shade(@theme_bg_color, 0.9)));
+
     color: @theme_fg_color;
-    text-shadow: none;
-
-    box-shadow: none;
 }
 
-PanelApplet .button:prelight:active,
 PanelApplet .button:active {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 0.85)),
-                                     to (shade(@theme_bg_color, 1.0)));
-
-    border-color: shade(@theme_bg_color, 0.7);
+    border-width: 0;
     border-radius: 0;
-    border-width: 0 1px 0 1px;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_bg_color, 1.06), 0.97)),
+                                     to (shade(shade(@theme_bg_color, 1.06), 0.82)));
 }
 
-PanelApplet .button:prelight {
+PanelApplet .button:prelight,
+PanelApplet .button:active:prelight {
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.7)),
-                                     to (shade(@theme_bg_color, 1.25)));
-
-    border-color: shade(@theme_bg_color, 0.7);
-    border-radius: 0;
-    border-width: 0 1px 0 1px;
-}
-
-ClockBox {
-    text-shadow: 0 -1px shade(@theme_bg_color, 0.6);
+                                     from (shade(shade(@theme_bg_color, 1.06), 1.40)),
+                                     to (shade(shade(@theme_bg_color, 1.06), 1.05)));
 }
 
 WnckPager, WnckTasklist {
@@ -102,18 +80,13 @@ WnckPager, WnckTasklist {
 /************
  * nautilus *
  ************/
-NautilusWindow * {
-    -GtkPaned-handle-size: 1;
-}
-
 .nautilus-canvas-item {
     border-radius: 2px;
 }
 
-/* desktop mode */
 .nautilus-desktop.nautilus-canvas-item {
-    color: @theme_fg_color;
-    text-shadow: 1px 1px alpha (@theme_bg_color, 0.8);
+    color: #fff;
+    text-shadow: 1px 1px #000;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {
@@ -134,76 +107,87 @@ NautilusWindow * {
     text-shadow: none;
 }
 
-/* browser window */
-NautilusTrashBar.info,
-NautilusXContentBar.info,
-NautilusSearchBar.info,
-NautilusQueryEditor.info {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@info_bg_color, 1.1)),
-                                     to (shade(@info_bg_color, 1.0)));
-
-    border-color: shade(@info_bg_color, 0.7);
+NautilusWindow .sidebar .frame {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
+}
+
+NautilusWindow > GtkGrid > .pane-separator {
+    border-width: 1px 1px 0 0;
     border-style: solid;
-    border-width: 0 0 1px 0;
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: shade(@theme_bg_color, 1.12);
 }
 
-.nautilus-cluebar-label {
-    font: bold;
-    color: @info_fg_color;
-}
-
-NautilusLocationEntry.entry {
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-NautilusQueryEditor .button,
-NautilusQueryEditor .button:focus,
-NautilusQueryEditor .button:active,
-NautilusQueryEditor .button:active:focus,
-NautilusSearchBar .entry,
-NautilusSearchBar .entry:focus {
-    border-color: darker(@info_bg_color);
-    border-style: solid;
-    border-width: 1px;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-/* inactive pane */
-.nautilus-inactive-pane .view {
-    background-color: shade(@theme_base_color, 0.9);
-}
-
-/* pane separator */
-NautilusWindow .pane-separator {
-    background-color: shade(@theme_bg_color, 0.8);
-}
-
-NautilusWindow .sidebar .view {
-	background-color: @theme_bg_color;
-	color: @theme_fg_color;
-	text-shadow: 1px 1px alpha (#000000, 0.8);
-}
-
-/* gnome-terminal */
-TerminalScreen {
-    background-color: @theme_base_color;
-    color: @theme_fg_color;
-    -TerminalScreen-background-darkness: 0.95;
-}
-TerminalWindow GtkNotebook.notebook {
-    border-bottom-width: 0;
+NautilusView.frame,
+NautilusNotebook.notebook {
     border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+NautilusNotebook .frame {
+    border-width: 1px 0 0 0;
+}
+
+NautilusQueryEditor .primary-toolbar.toolbar {
+    padding: 4px;
+    border-top-width: 1px;
+    border-bottom-width: 0;
+}
+
+NautilusQueryEditor .primary-toolbar.toolbar .button {
+    padding: 0;
+}
+
+NautilusQueryEditor .toolbar {
+    padding: 4px 4px 3px 4px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: @theme_bg_color;
+    background-color: mix(@theme_bg_color, @theme_base_color, 0.5);
+}
+
+NautilusQueryEditor .toolbar:nth-child(2) {
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar {
+    border-top-width: 0;
+}
+
+NautilusNotebook.notebook NautilusQueryEditor .toolbar:last-child,
+NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    border-bottom-width: 1px;
+    border-bottom-color: shade(@theme_bg_color, 0.8);
+}
+
+.toolbar NautilusPathBar .button {
+    padding: 1px 5px;
+}
+
+/******************
+ * gnome terminal *
+ ******************/
+TerminalScreen {
+    -TerminalScreen-background-darkness: 0.9;
+
+    background-color: #333;
+    color: #eee;
+}
+
+TerminalWindow GtkNotebook.notebook {
+    border-right-width: 0;
+    border-bottom-width: 0;
     border-left-width: 0;
 }
 
 /*********
  * gedit *
  *********/
-GeditWindow .pane-separator,
+GeditWindow .pane-separator, 
 GeditWindow .pane-separator:hover {
     border-width: 0 1px 1px 1px;
     border-style: solid;
