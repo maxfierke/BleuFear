@@ -646,13 +646,14 @@ GtkLabel:insensitive {
 /***********
  * infobar *
  ***********/
+GtkInfoBar,
 .info {
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@info_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@info_bg_color, 1.1)),
-                                     to (shade(@info_bg_color, 0.96)));
+                                     from (shade(@theme_bg_color, 1.1)),
+                                     to (shade(@theme_bg_color, 0.96)));
 
     color: @info_fg_color;
 }
@@ -660,10 +661,10 @@ GtkLabel:insensitive {
 .warning {
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@warning_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@warning_bg_color, 1.04)),
-                                     to (shade(@warning_bg_color, 0.96)));
+                                     from (shade(@theme_bg_color, 1.04)),
+                                     to (shade(@theme_bg_color, 0.96)));
 
     color: @warning_fg_color;
 }
@@ -671,10 +672,10 @@ GtkLabel:insensitive {
 .question {
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@question_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@question_bg_color, 1.04)),
-                                     to (shade(@question_bg_color, 0.96)));
+                                     from (shade(@theme_bg_color, 1.04)),
+                                     to (shade(@theme_bg_color, 0.96)));
 
     color: @question_fg_color;
 }
@@ -682,10 +683,10 @@ GtkLabel:insensitive {
 .error {
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@error_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
     background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@error_bg_color, 1.04)),
-                                     to (shade(@error_bg_color, 0.96)));
+                                     from (shade(@theme_bg_color, 1.04)),
+                                     to (shade(@theme_bg_color, 0.96)));
 
     color: @error_fg_color;
 }
