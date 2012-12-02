@@ -906,7 +906,7 @@ GtkTreeMenu .menuitem * {
 
 .menu .menuitem:insensitive,
 .menu .menuitem *:insensitive {
-    color: shade(@theme_selected_fg_color, 0.5);
+    color: shade(@theme_selected_fg_color, 0.7);
 }
 
 .menuitem.check,
