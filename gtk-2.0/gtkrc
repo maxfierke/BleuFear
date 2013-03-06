@@ -1,4 +1,4 @@
-# Evolve GTK Theme
+# BleuFear GTK Theme
 
 gtk_color_scheme = "base_color:#363636\nbg_color:#292929\nselected_bg_color:#0390c4\ntext_color:#eeeeee\nfg_color:#eeeeee\nselected_fg_color:#eeeeee\nlink_color:#0390c4"
 
