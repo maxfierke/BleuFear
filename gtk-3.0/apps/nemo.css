@@ -1,0 +1,36 @@
+/* Breadcrumbs */
+.nemo-pathbar-button,
+NemoPathbarButton {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     color-stop (0, shade(alpha(@bg_color, 0.8), 1.0)),
+                                     color-stop (.7, shade(alpha(@bg_color, 0.8), 0.90)),
+                                     color-stop (1, shade(alpha(@bg_color, 0.8), 0.80)));
+    border-top-color: #333333;
+    border-color: #303030;
+    -NemoPathbarButton-border-radius: 3px;
+}
+
+NemoPathbarButton:active {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     color-stop (0, shade(alpha(@bg_color, 0.8), .8)),
+                                     color-stop (1, shade(alpha(@bg_color, 0.8), 1.0)));
+    border-top-color: #333333;
+    border-color: #303030;
+}
+
+NemoPathbarButton:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     color-stop (0, shade(alpha(@selected_bg_color, 0.8), 1.05)),
+                                     color-stop (.7, shade(alpha(@selected_bg_color, 0.8), 0.95)),
+                                     color-stop (1, shade(alpha(@selected_bg_color, 0.8), 0.85)));
+    border-top-color: #333333;
+    border-color: #303030;
+}
+
+NemoPathbarButton:active:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     color-stop (0, shade(alpha(@selected_bg_color, 0.8), .80)),
+                                     color-stop (1, shade(alpha(@selected_bg_color, 0.8), 1.25)));
+    border-top-color: #333333;
+    border-color: #303030;
+}
