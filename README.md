@@ -1,3 +1,7 @@
+#NOTICE
+
+I can't keep up with the changes in GTK anymore. As you'll have noticed, this theme still has bugs in GTK 3.8, and remains untested by me in GTK 3.10 and up. If anyone wants to pick this project up, you're very much welcome to do so.
+
 #About
 
 BleuFear is a GTK 2/3 theme with a wild streak of electric blue. It is inspired by the design of my site and everything else that fits that color scheme. The name comes from the French word for blue(duh) and the way Americans pronounce the first part of my last name. (Also, it's a dark theme so fear~=dark).
