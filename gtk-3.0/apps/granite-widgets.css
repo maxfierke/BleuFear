@@ -56,20 +56,20 @@
     background-color: @theme_base_color;
 }
 
-.content-view-window {    
+.content-view-window {
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);    
+    border-color: shade(@theme_bg_color, 0.8);
     border-radius: 5px;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (@theme_base_color),
-                                     to (shade(@theme_base_color, 0.97)));
+    background-image: linear-gradient(to bottom,
+        @theme_base_color,
+        shade(@theme_base_color, 0.97));
 }
 
 .content-view .entry {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_base_color, 0.97)),
-                                     to (@theme_base_color));
+    background-image: linear-gradient(to bottom,
+        shade(@theme_base_color, 0.97),
+        @theme_base_color);
 }
 
 .content-view .title,
@@ -103,16 +103,16 @@
 
 .content-view .help_button * {
     color: @theme_text_color;
-}   
+}
 
 .content-view .toolbar {
     padding: 1px;
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_bg_color, 1.0)),
-                                     to (shade(@theme_bg_color, 1.2)));
+    background-image: linear-gradient(to bottom,
+        shade(@theme_bg_color, 1.0),
+        shade(@theme_bg_color, 1.2));
     -GtkWidget-window-dragging: true;
 }
 
@@ -126,7 +126,7 @@
     background-color: @theme_base_color;
     color: @theme_fg_color;
 }
- 
+
 .album-list-view GtkTreeView {
     -GtkTreeView-vertical-separator: 1;
     -GtkTreeView-grid-line-width: 0;
@@ -152,9 +152,9 @@
  *************/
 GraniteWidgetsStatusBar {
     padding: 1px;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(shade(@theme_bg_color, 1.06), 1.12)),
-                                     to (shade(shade(@theme_bg_color, 1.06), 0.97)));
+    background-image: linear-gradient(to bottom,
+        shade(shade(@theme_bg_color, 1.06), 1.12),
+        shade(shade(@theme_bg_color, 1.06), 0.97));
 
     box-shadow: inset 0 1px shade(@theme_bg_color, 0.8);
 }
@@ -176,9 +176,9 @@ GraniteWidgetsPopOver {
 
 .popover_bg {
     background-color: transparent;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-			         from (shade(@theme_base_color, 0.97)),
-			         to (shade(@theme_base_color, 0.92)));
+    background-image: linear-gradient(to bottom,
+        shade(@theme_base_color, 0.97),
+        shade(@theme_base_color, 0.92));
 }
 
 GraniteWidgetsPopOver .sidebar.view,
@@ -186,7 +186,7 @@ GraniteWidgetsPopOver * {
     background-color: transparent;
 }
 
-GraniteWidgetsPopOver .button {    
+GraniteWidgetsPopOver .button {
     background-color: transparent;
     background-image: none;
 }
@@ -198,9 +198,9 @@ GraniteWidgetsPopOver .button:hover:active {
 }
 
 GraniteWidgetsPopOver .entry {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_base_color, 0.97)),
-                                     to (@theme_base_color));
+    background-image: linear-gradient(to bottom,
+        shade(@theme_base_color, 0.97),
+        @theme_base_color);
 
     color: @theme_text_color;
 }
@@ -212,10 +212,9 @@ GraniteWidgetsPopOver .entry {
 
 .app:hover,
 .app:focus {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@theme_selected_bg_color, 1.1)),
-                                     to (shade(@theme_selected_bg_color, 0.9)));
-
+    background-image: linear-gradient(to bottom,
+        shade(@theme_selected_bg_color, 1.1),
+        shade(@theme_selected_bg_color, 0.9));
     color: @theme_selected_fg_color;
 }
 
@@ -229,14 +228,13 @@ GraniteWidgetsPopOver .entry {
 
 .shadow {
     background-color: transparent;
-    background-image: -gtk-gradient(linear,
-                     left top, left bottom,
-                     from (rgba(0, 0, 0, 0.3)),
-                     to (transparent));
+    background-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.3),
+        transparent);
 }
 
 .composited-indicator,
-.wingpanel-app-button, 
+.wingpanel-app-button,
 .wingpanel-indicator-button {
     background-color: transparent;
     color: #fff;
