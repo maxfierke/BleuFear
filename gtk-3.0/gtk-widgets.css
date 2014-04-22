@@ -1931,3 +1931,11 @@ GtkViewport.frame {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
+
+/**************
+ * header bar *
+ **************/
+/* new client side decorations for GTK 3.10 */
+GtkHeaderBar {
+    background-color: @theme_bg_color;
+}
