@@ -13,10 +13,24 @@ Original project page: https://github.com/maxfierke/BleuFear
 -   Icon theme: Faenza-Darkest
 -   GNOME-shell: [Gnomarch](http://alucryd.deviantart.com/art/Gnome-Shell-GnomArch-245249611)
 -   Cinnamon Theme: Minty-Colors
+-   To fix text input not rendering dark in Firefox, add this to `~/.mozilla/firefox/$PROFILEDIR/chrome/userContent.css`:
+
+```
+input {
+-moz-appearance: none !important;
+background-color: white;
+color: black;
+}
+textarea {
+-moz-appearance: none !important;
+background-color: white;
+color: black;
+}
+```
 
 #Links
- * Ubuntu PPA:
- * ArchLinux [AUR package](https://aur.archlinux.org/packages.php?ID=55505).
+ * Ubuntu PPA: https://launchpad.net/~m4xm4n/+archive/ubuntu/bleufear
+ * ArchLinux AUR package: https://aur.archlinux.org/packages.php?ID=55505
 
 
 #License
