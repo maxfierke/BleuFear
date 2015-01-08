@@ -1,6 +1,6 @@
 # Bleufear GTK theme
 
-BleuFear is a dark GTK 2/3 theme with a wild streak of electric blue.  
+BleuFear is a dark GTK2/GTK3/unity/metacity/xfwm theme with a wild streak of electric blue.  
 Original project page: https://github.com/maxfierke/BleuFear
 
 ## Install/Usage
