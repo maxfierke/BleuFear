@@ -36,7 +36,7 @@ BleuFear is licensed under the GNU GPL version 3.
 <http://www.gnu.org/copyleft/gpl.html>
 
 ## Authors
-* Max Fierke (http://www.maxfierke.com/ - https://github.com/maxfierke/)
+* Max Fierke (http://www.maxfierke.com/ - https://github.com/maxfierke/ - https://www.maxfierke.com/projects/)
 * Satyajit Sahoo (satya164) - Reponsible for the Evolve theme, of which BleuFear is based on.
 * Ivan Kasenkov - Made the metacity, xfwm4, and unity theme that I took from his Adwaita-X-Dark theme.
 * Lin Xianyi (@iynaix) - Contributed patches to improve appearence on GNOME 3.8 & GNOME 3.12.
